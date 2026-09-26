@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Evertton Thiago, desenvolvedor front-end apaixonado por tecnologia. Explore meus projetos, habilidades e certificados em HTML, CSS, JavaScript e mais.">
+    <meta name="keywords" content="desenvolvedor, front-end, HTML, CSS, JavaScript, portfólio, Evertton Thiago">
+    <meta name="author" content="Evertton Thiago">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dark_portifólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./fotos do port/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+    <div class="background-effects" aria-hidden="true">
+        <span class="tech-float">HTML</span>
+        <span class="tech-float">CSS</span>
+        <span class="tech-float">JavaScript</span>
+        <span class="tech-float">React</span>
+        <span class="tech-float">Node.js</span>
+        <span class="tech-float">Python</span>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema">
+        <svg class="light-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/>
+        </svg>
+    </button>
+
+    <div class="scroll-indicator"></div>
+
+    <header>
+        <nav class="nav-buttons" role="navigation" aria-label="Navegação principal">
+            <div class="nav-logo">Evertton.</div>
+            <div class="nav-links">
+                <a class="nav-btn" href="#home">Home</a>
+                <a class="nav-btn" href="#about">Sobre</a>
+                <a class="nav-btn" href="#skills">Skills</a>
+                <a class="nav-btn" href="#projects">Projetos</a>
+                <a class="nav-btn" href="#certificates">Certificados</a>
+                <a class="nav-btn" href="#ia-assistant">IA</a>
+            </div>
+            <a class="nav-btn cta-nav" href="#contact">Contato</a>
+        </nav>
+        <div class="tech-icons">
+            <svg class="tech-icon" viewBox="0 0 100 100" title="Python">
+                <defs>
+                    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3776ab;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#366994;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#pythonGrad)" d="M50 15c-9.3 0-10.5 4.2-10.5 9.7v7.6h21v2.3h-20.1c-5.8 0-10.8 3.5-10.8 10.2 0 6.5 3.5 10.2 10.8 10.2h7.3v-9.8c0-6 5.4-7.1 10.8-7.1h20.8c5.8 0 10.2-3.9 10.2-9.7v-17.7c0-5.5-4.5-9.7-10.2-9.7h-20.3zm-11 7.7c1.8 0 3.3 1.5 3.3 3.3s-1.5 3.3-3.3 3.3-3.3-1.5-3.3-3.3 1.5-3.3 3.3-3.3z"/>
+                <path fill="#ffd43b" d="M50 85c9.3 0 10.5-4.2 10.5-9.7v-7.6h-21v-2.3h20.1c5.8 0 10.8-3.5 10.8-10.2 0-6.5-3.5-10.2-10.8-10.2h-7.3v9.8c0 6-5.4 7.1-10.8 7.1h-20.8c-5.8 0-10.2 3.9-10.2 9.7v17.7c0 5.5 4.5 9.7 10.2 9.7h20.3zm11-7.7c-1.8 0-3.3-1.5-3.3-3.3s1.5-3.3 3.3-3.3 3.3 1.5 3.3 3.3-1.5 3.3-3.3 3.3z"/>
+            </svg>
+            <svg class="tech-icon" viewBox="0 0 100 100" title="HTML5">
+                <path fill="#e34c26" d="M15 5l7 70l25 10 25-10 7-70H15zm10 15h50v10H35v8h30v10H35v8h30v10H25z"/>
+            </svg>
+            <svg class="tech-icon" viewBox="0 0 100 100" title="CSS3">
+                <path fill="#1572b6" d="M15 5l7 70l25 10 25-10 7-70H15zm35 55l-20-6v-10h20v10l-15 4v8l15 4v10l-20-5v-10l14-4v-8l-14-4z"/>
+            </svg>
+            <svg class="tech-icon" viewBox="0 0 100 100" title="JavaScript">
+                <rect width="100" height="100" fill="#f7df1e" rx="10"/>
+                <text x="50" y="70" font-size="50" font-weight="bold" fill="#000" text-anchor="middle">JS</text>  
+            </svg>
+            <svg class="tech-icon" viewBox="0 0 100 100" title="React">
+                <circle cx="50" cy="50" r="8" fill="#61dafb"/>
+                <ellipse cx="50" cy="50" rx="25" ry="8" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(0)"/>
+                <ellipse cx="50" cy="50" rx="25" ry="8" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(60)"/>
+                <ellipse cx="50" cy="50" rx="25" ry="8" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(120)"/>
+            </svg>
+            <svg class="tech-icon" viewBox="0 0 100 100" title="Node.js">
+                <path fill="#68a063" d="M50 10c-11 0-20 9-20 20v40c0 11 9 20 20 20s20-9 20-20V30c0-11-9-20-20-20zm0 10c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10zm-15 30c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm30 0c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"/>
+            </svg>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Portfólio profissional</span>
+                <h1>Bem-vindo ao meu <span>Portfólio</span></h1>
+                <p>Transformo ideias em experiências digitais com um design elegante, usando tecnologias modernas para criar interfaces limpas e funcionais.</p>
+                <div class="hero-actions">
+                    <a class="cta-btn" href="#projects">Ver projetos</a>
+                    <a class="ghost-btn" href="#contact">Fale comigo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Tecnologias Dominadas</div>
+                    <div class="stat-bar"><div class="stat-fill"></div></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Certificações Profissionais</div>
+                    <div class="stat-bar"><div class="stat-fill"></div></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Projetos Destacados</div>
+                    <div class="stat-bar"><div class="stat-fill"></div></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Dedicação ao Código</div>
+                    <div class="stat-bar"><div class="stat-fill"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <div class="about-grid">
+                <div class="about-copy">
+                    <p>Sou um apaixonado por tecnologia que recentemente mergulhou no fascinante mundo da programação. Embora seja novo na área, o meu amor por resolver problemas e criar soluções inovadoras me levou a dedicar incontáveis horas para aprimorar minhas habilidades em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.</p>
+                    <p>Atualmente, sou um desenvolvedor em treinamento para a área de full stack, concluindo minha formação completa de full stack com foco em front-end e back-end. Essa jornada tem me preparado para construir aplicações modernas do início ao fim.</p>
+                    <p>Transitando de carreira aos 18 anos, estou ansioso para explorar oportunidades, aprender e crescer nesta indústria. Busco constantemente desafios que me permitam aplicar e expandir meu conhecimento em desenvolvimento front-end.</p>
+                    <p>Meu objetivo é não apenas me tornar um programador proficiente, mas também contribuir para projetos que tenham impacto significativo, seja em uma startup em crescimento ou em uma grande empresa de tecnologia.</p>
+                    <p>Além disso, estou aprendendo inglês e espanhol para melhorar minha comunicação e acesso a recursos globais, o que me ajuda a ser um programador mais eficaz e colaborativo em equipes internacionais.</p>
+                    <ul class="about-list">
+                        <li>Desenvolvimento front-end com foco em experiência do usuário</li>
+                        <li>Sites e interfaces responsivas com desempenho e estilo</li>
+                        <li>Trabalho com projetos reais, testes e integração criativa</li>
+                    </ul>
+                </div>
+                <figure class="profile-card">
+                    <img src="./1774829199175.webp" alt="Foto de Evertton">
+                    <figcaption>Evertton Thiago <strong>(Developer)</strong></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="floating-icons">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+                <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/></svg>
+            </div>
+            <div class="particles">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h2>Habilidades</h2>
+            <div class="skill-grid">
+                <div class="skill-item" data-skill="html">
+                    <span><svg viewBox="0 0 24 24" fill="#e34c26"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> HTML</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill html-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="css">
+                    <span><svg viewBox="0 0 24 24" fill="#1572b6"><circle cx="12" cy="12" r="10"/></svg> CSS</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill css-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="js">
+                    <span><svg viewBox="0 0 24 24" fill="#f7df1e"><rect x="4" y="4" width="16" height="16"/></svg> JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill js-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="react">
+                    <span><svg viewBox="0 0 24 24" fill="#61dafb"><ellipse cx="12" cy="12" rx="10" ry="4"/></svg> React</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill react-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="node">
+                    <span><svg viewBox="0 0 24 24" fill="#68a063"><path d="M12 2l-1 1v2h2V3l-1-1z"/></svg> Node.js</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill node-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="python">
+                    <span><svg viewBox="0 0 24 24" fill="#3776ab"><path d="M12 2c-1.1 0-2 .9-2 2v1H8c-.55 0-1 .45-1 1s.45 1 1 1h1v1c0 2.76 2.24 5 5 5s5-2.24 5-5V7h1c.55 0 1-.45 1-1s-.45-1-1-1h-2V4c0-1.1-.9-2-2-2z"/></svg> Python</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill python-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="git">
+                    <span><svg viewBox="0 0 24 24" fill="#f05032"><path d="M12 2c-1.1 0-2 .9-2 2v1H8c-.55 0-1 .45-1 1s.45 1 1 1h1v1c0 2.76 2.24 5 5 5s5-2.24 5-5V7h1c.55 0 1-.45 1-1s-.45-1-1-1h-2V4c0-1.1-.9-2-2-2z"/></svg> Git</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill git-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-skill="uiux">
+                    <span><svg viewBox="0 0 24 24" fill="#ff6b6b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> UI/UX</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill uiux-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projetos</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3><strong>01:</strong> Freelancer Hub</h3>
+                    <p>Diversos sites de freelancers criados com HTML, CSS, JavaScript, React, Node.js e Python. Integrações com IA para personalizar a experiência e entregar soluções modernas.</p>
+                    <figure>
+                        <video src="./fotos do port/vidiododarkgenerator.mp4" controls></video>
+                        <p>Dark generator - AI and development</p>
+                    </figure>
+                </article>
+                <article class="project-card">
+                    <h3><strong>02:</strong> Delivery App Web</h3>
+                    <p>Site de delivery em desenvolvimento com suporte a app mobile. Front-end responsivo e back-end com foco em usabilidade, imersão e controle de pedidos.</p>
+                    <figure>
+                        <img src="./fotos do port/1713491545256.jpg" alt="Site de delivery">
+                        <video src="./fotos do port/Gravando 2026-04-27 202946.mp4" controls></video>
+                        <img src="./fotos do port/ChatGPT Image 26 de abr. de 2026, 21_52_55.png" alt="App de delivery">
+                    </figure>
+                </article>
+                <article class="project-card">
+                    <h3><strong>03:</strong> Dark Converter</h3>
+                    <p>Conversor de moedas com interface escura, desenvolvido para consultar e converter valores entre diferentes moedas de forma simples e rápida.</p>
+                    <figure>
+                        <img src="./fotos do port/dark converter.png" alt="Interface do Dark Converter, um conversor de moedas">
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <h2>Certificados</h2>
+            <p>Aqui estão os certificados e cursos que realizei para aprimorar minhas habilidades e o profissionalismo do meu trabalho.</p>
+            <div class="certificates-container">
+                <article class="certificate-card">
+                    <span class="cert-badge html-badge">HTML5</span>
+                    <img src="./certificados/Certificado - HTML.png" alt="Certificado de HTML">
+                    <h4>Formação DevClub HTML — Rodolfo Mori</h4>
+                    <p>Complementei minha formação no DevClub do Rodolfo Mori, um curso prático com foco em projetos reais, boas práticas de desenvolvimento, organização de código e criação de interfaces responsivas.</p>
+                    <p>Essa formação me trouxe mais confiança para desenvolver sites profissionais e aplicar metodologias modernas em front-end, além de ampliar minha visão sobre usabilidade e manutenção de projetos.</p>
+                    <p class="certificate-date">Emitido em: 2026</p>
+                </article>
+                <article class="certificate-card">
+                    <span class="cert-badge css-badge">CSS3</span>
+                    <img src="./certificados/Certificado - CSS Intermediário.png" alt="Certificado de CSS Intermediário">
+                    <h4>Certificação CSS DevClub</h4>
+                    <p>Curso focado em layout moderno, responsividade e animações CSS, fortalecendo minha capacidade de criar interfaces visuais mais refinadas.</p>
+                    <p>Aprendi a estruturar páginas com flexbox, grid e transições fluidas para entregar experiências mais envolventes e profissionais.</p>
+                    <p class="certificate-date">Emitido em: 2026</p>
+                </article>
+                <article class="certificate-card">
+                    <span class="cert-badge js-badge">JavaScript + IA</span>
+                    <img src="./certificados/Captura de tela 2026-04-05 190035.png" alt="Captura de tela de certificados">
+                    <h4>Curso de JavaScript,HTML e css com integração a IA</h4>
+                    <p>curso de desenvolvimento web com foco em integração de inteligência artificial que melhora a eficiência e a qualidade do código para que o usuario tenha conforto durante a navegação</p>
+                    <p class="certificate-date">Adicionado: 2026</p>
+                </article>
+                <article class="certificate-card">
+                    <span class="cert-badge git-badge">Git & GitHub</span>
+                    <img src="./certificados/gitANDgithub.png" alt="Certificado de Git & GitHub">
+                    <h4>Git & GitHub Masterclass</h4>
+                    <p>Domínio completo de versionamento de código com Git, trabalhando com repositórios, branches, commits e colaboração em equipe através do GitHub.</p>
+                    <p>Aprendi boas práticas de controle de versão, workflow profissional, pull requests e resolução de conflitos para trabalhar eficientemente em projetos colaborativos.</p>
+                    <p class="certificate-date">Adicionado: 2026</p>
+                </article>
+                <article class="certificate-card">
+                    <h3 style="text-align: center; color: #a0a0a0;">Coming Soon...</h3>
+                    <p style="text-align: center; color: #a0a0a0;">Mais certificados e formações estão por vir! Continue acompanhando meu progresso e desenvolvimento profissional.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="ia-assistant">
+            <h2>IA Assistente</h2>
+            <p>Fale comigo através do assistente de IA. Faça perguntas sobre desenvolvimento web, meus projetos, habilidades ou qualquer outro assunto!</p>
+            <div class="ia-container">
+                <div class="ia-chat-box">
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="message bot-message">
+                            <span class="bot-icon">👑</span>
+                            <div class="message-content">
+                                <p>Olá! 👋 Sou a Kawanny, assistente de IA do portfólio de Evertton. Como posso ajudá-lo? Você pode me perguntar sobre:</p>
+                                <ul style="margin-top: 10px; padding-left: 20px;">
+                                    <li>Minhas habilidades e experiências</li>
+                                    <li>Meus projetos</li>
+                                    <li>Desenvolvimento web</li>
+                                    <li>Tecnologias que uso</li>
+                                    <li>Como trabalhar comigo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" class="chat-input" placeholder="Digite sua pergunta..." />
+                        <button id="send-btn" class="send-btn">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Enviar Mensagem</button>
+            </form>
+            <div class="contact-links">
+                <article class="contact-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:everttondark3@gmail.com">everttondark3@gmail.com</a></p>
+                </article>
+                <article class="contact-card">
+                    <h3>Instagram</h3>
+                    <p><a href="https://www.instagram.com/evertton.th_/" target="_blank" rel="noreferrer">@evertton.th_</a></p>
+                </article>
+                <article class="contact-card">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/evertton-thiago-1953203bb" target="_blank" rel="noreferrer">linkedin.com/in/evertton-thiago-1953203bb</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Compartilho insights sobre desenvolvimento web, tutoriais e experiências no mundo da programação.</p>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <h3>Introdução ao HTML Semântico</h3>
+                    <p>Aprenda a importância do HTML semântico para acessibilidade e SEO.</p>
+                    <a href="#" class="read-more">Ler mais</a>
+                </article>
+                <article class="blog-card">
+                    <h3>CSS Grid vs Flexbox</h3>
+                    <p>Quando usar cada um? Uma comparação prática.</p>
+                    <a href="#" class="read-more">Ler mais</a>
+                </article>
+                <article class="blog-card">
+                    <h3>JavaScript Assíncrono</h3>
+                    <p>Entendendo promises, async/await e fetch API.</p>
+                    <a href="#" class="read-more">Ler mais</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-top">
+        <button class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Topo</button>
+    </footer>
+
+    <dialog class="image-viewer" aria-label="Visualizador de imagens">
+        <button class="image-viewer-close" type="button" aria-label="Fechar imagem">&times;</button>
+        <button class="image-viewer-previous" type="button" aria-label="Imagem anterior">&#10094;</button>
+        <figure>
+            <img class="image-viewer-image" src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <button class="image-viewer-next" type="button" aria-label="Próxima imagem">&#10095;</button>
+        <span class="image-viewer-count" aria-live="polite"></span>
+    </dialog>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
