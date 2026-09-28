@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------------------------------------------------------------
      Active nav link on scroll
   --------------------------------------------------------------------- */
-  const sections = ['about', 'skills', 'projects', 'certificates', 'kawanny']
+  const sections = ['about', 'journey', 'skills', 'projects', 'certificates', 'kawanny']
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const navBysection = new Map(

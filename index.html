@@ -10,6 +10,8 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Evertton Thiago — Desenvolvedor Front-end" id="meta-og-title">
     <meta property="og:description" content="Projetos, habilidades e certificados de um desenvolvedor em transição de carreira para tecnologia." id="meta-og-description">
+    <meta property="og:image" content="./1774829199175.webp">
+    <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
     <title id="page-title">Evertton Thiago — Desenvolvedor Front-end</title>
@@ -32,6 +34,7 @@
             </button>
             <div class="nav-links" id="nav-links">
                 <a class="nav-link" href="#about" data-section="about" data-i18n="nav.about">Sobre</a>
+                <a class="nav-link" href="#journey" data-section="journey" data-i18n="nav.journey">Jornada</a>
                 <a class="nav-link" href="#skills" data-section="skills" data-i18n="nav.skills">Skills</a>
                 <a class="nav-link" href="#projects" data-section="projects" data-i18n="nav.projects">Projetos</a>
                 <a class="nav-link" href="#certificates" data-section="certificates" data-i18n="nav.certificates">Certificados</a>
@@ -166,6 +169,47 @@
             </div>
         </section>
 
+        <section id="journey">
+            <div class="section-head">
+                <h2 data-i18n="journey.title">Minha evolução</h2>
+                <p data-i18n="journey.lede">Uma jornada construída com prática, curiosidade e projetos reais.</p>
+            </div>
+            <div class="journey-timeline">
+                <article class="journey-item">
+                    <span class="journey-marker">01</span>
+                    <div>
+                        <p class="journey-period" data-i18n="journey.p1.period">O começo</p>
+                        <h3 data-i18n="journey.p1.title">Primeiros passos no desenvolvimento web</h3>
+                        <p data-i18n="journey.p1.desc">Comecei a transformar curiosidade por tecnologia em prática com HTML, CSS e JavaScript.</p>
+                    </div>
+                </article>
+                <article class="journey-item">
+                    <span class="journey-marker">02</span>
+                    <div>
+                        <p class="journey-period" data-i18n="journey.p2.period">Na prática</p>
+                        <h3 data-i18n="journey.p2.title">Projetos para resolver problemas reais</h3>
+                        <p data-i18n="journey.p2.desc">Passei a construir ferramentas, interfaces responsivas e experiências que podem ser usadas de verdade.</p>
+                    </div>
+                </article>
+                <article class="journey-item">
+                    <span class="journey-marker">03</span>
+                    <div>
+                        <p class="journey-period" data-i18n="journey.p3.period">Agora</p>
+                        <h3 data-i18n="journey.p3.title">Expansão para full stack</h3>
+                        <p data-i18n="journey.p3.desc">Estou aprofundando React, Node.js e Python para entender e construir produtos de ponta a ponta.</p>
+                    </div>
+                </article>
+                <article class="journey-item">
+                    <span class="journey-marker">04</span>
+                    <div>
+                        <p class="journey-period" data-i18n="journey.p4.period">Próximo passo</p>
+                        <h3 data-i18n="journey.p4.title">Entrar no mercado e continuar crescendo</h3>
+                        <p data-i18n="journey.p4.desc">Busco uma oportunidade para colaborar, aprender com um time e entregar valor desde o primeiro dia.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section id="projects">
             <div class="section-head">
                 <h2 data-i18n="projects.title">Projetos</h2>
@@ -177,7 +221,7 @@
                         <video src="./fotos do port/vidiododarkgenerator.mp4" controls preload="metadata"></video>
                     </div>
                     <div class="project-body">
-                        <h3>Dark Generator</h3>
+                        <div class="project-heading"><span class="project-status" data-i18n="projects.statusComplete">Concluído</span><h3>Dark Generator</h3></div>
                         <p data-i18n="projects.p1.desc">Ferramenta com integração de IA para gerar temas escuros personalizados. Front-end em HTML, CSS e JavaScript, com lógica em Python para o processamento.</p>
                         <ul class="project-tags">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li data-i18n="tag.ia">IA</li>
@@ -195,7 +239,7 @@
                         <video src="./fotos do port/Gravando 2026-04-27 202946.mp4" controls preload="metadata"></video>
                     </div>
                     <div class="project-body">
-                        <h3>Delivery App Web</h3>
+                        <div class="project-heading"><span class="project-status project-status-progress" data-i18n="projects.statusProgress">Em desenvolvimento</span><h3>Delivery App Web</h3></div>
                         <p data-i18n="projects.p2.desc">Site de delivery com suporte a versão mobile, ainda em desenvolvimento. Front-end responsivo pensado para pedidos rápidos, com foco em usabilidade em telas pequenas.</p>
                         <ul class="project-tags">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li><li data-i18n="tag.responsive">Responsivo</li>
@@ -212,7 +256,7 @@
                         <img src="./fotos do port/dark converter.png" alt="Interface do Dark Converter, um conversor de moedas" loading="lazy">
                     </div>
                     <div class="project-body">
-                        <h3>Dark Converter</h3>
+                        <div class="project-heading"><span class="project-status" data-i18n="projects.statusComplete">Concluído</span><h3>Dark Converter</h3></div>
                         <p data-i18n="projects.p3.desc">Conversor de moedas com interface escura, criado para consultar e converter valores entre moedas diferentes de forma simples e rápida.</p>
                         <ul class="project-tags">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li>
