@@ -78,6 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   sections.forEach((section) => sectionObserver.observe(section));
 
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('main > section:not(.hero)').forEach((section) => revealObserver.observe(section));
+
   /* ---------------------------------------------------------------------
      Hero terminal typing effect (single orchestrated moment)
   --------------------------------------------------------------------- */
