@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   --------------------------------------------------------------------- */
   const themeToggle = document.getElementById('theme-toggle');
   const body = document.body;
-  if (localStorage.getItem('theme') === 'light') body.classList.add('light-theme');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') body.classList.add('light-theme');
   themeToggle?.addEventListener('click', () => {
     body.classList.toggle('light-theme');
     localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
@@ -341,14 +342,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkBackend = async () => {
       setStatus('checking');
       try {
-        const reply = await askBackend('ping de verificação de conexão, responda apenas "ok"');
+        const r = await fetch('/api/chat');
+        const d = await r.json();
+        if (!r.ok || !d.ai) throw new Error('sem IA');
         backendAvailable = true;
         setStatus('online');
-        return reply;
       } catch (err) {
         backendAvailable = false;
         setStatus('offline');
-        return null;
       }
     };
 
@@ -394,3 +395,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* Título do hero: cada palavra sobe de uma máscara (refaz ao trocar de idioma) */
+(() => {
+  const h1 = document.querySelector('.hero-copy h1');
+  if (!h1) return;
+  document.addEventListener('languagechange', () => {
+    const txt = h1.textContent.trim();
+    h1.setAttribute('aria-label', txt);
+    h1.innerHTML = txt.split(/\s+/).map((w, i) => `<span class="w" aria-hidden="true"><span style="--i:${i}">${w}</span></span>`).join(' ');
+  });
+})();
+
+/* Copiar e-mail */
+(() => {
+  const btn = document.getElementById('copy-mail');
+  if (!btn) return;
+  btn.addEventListener('click', async () => {
+    const d = window.I18N[window.currentLang] || window.I18N.pt;
+    try { await navigator.clipboard.writeText('everttondark3@gmail.com'); } catch (e) { return; }
+    btn.textContent = d['contact.copied'];
+    setTimeout(() => { btn.textContent = (window.I18N[window.currentLang] || d)['contact.copy']; }, 1800);
+  });
+})();

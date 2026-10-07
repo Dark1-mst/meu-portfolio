@@ -20,9 +20,29 @@ objetiva, no idioma indicado nas instruções abaixo. Você pode responder qualq
 dúvidas gerais de programação, tecnologia ou conversas casuais. Mantenha respostas curtas
 (no máximo 3-4 frases) a menos que o usuário peça mais detalhe.`;
 
+const hits = new Map();
+const limited = (ip) => {
+  const now = Date.now();
+  const recent = (hits.get(ip) || []).filter((t) => now - t < 60000);
+  recent.push(now);
+  hits.set(ip, recent);
+  return recent.length > 12; // 12 mensagens por minuto por IP
+};
+
 module.exports = async (req, res) => {
+  if (req.method === 'GET') {
+    // health-check barato: o site pergunta se a IA está configurada sem gastar tokens
+    res.status(200).json({ ok: true, ai: Boolean(process.env.ANTHROPIC_API_KEY) });
+    return;
+  }
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Método não permitido' });
+    return;
+  }
+
+  const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'anon';
+  if (limited(ip)) {
+    res.status(429).json({ error: 'Muitas mensagens em pouco tempo. Tente de novo em instantes.' });
     return;
   }
 
@@ -58,7 +78,7 @@ module.exports = async (req, res) => {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-3-5-sonnet-20241022',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 400,
         system: `${SYSTEM_PROMPT}\n\n${languageInstruction}`,
         messages,

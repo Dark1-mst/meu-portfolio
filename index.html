@@ -7,21 +7,27 @@
     <meta name="description" content="Portfólio de Evertton Thiago, desenvolvedor front-end em transição para full stack. Projetos, habilidades e certificados em HTML, CSS, JavaScript, React, Node.js e Python." id="meta-description">
     <meta name="keywords" content="desenvolvedor, front-end, full stack, HTML, CSS, JavaScript, React, portfólio, Evertton Thiago">
     <meta name="author" content="Evertton Thiago">
+    <meta name="theme-color" content="#040508">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Evertton Thiago — Desenvolvedor Front-end" id="meta-og-title">
     <meta property="og:description" content="Projetos, habilidades e certificados de um desenvolvedor em transição de carreira para tecnologia." id="meta-og-description">
-    <meta property="og:image" content="./1774829199175.webp">
+    <meta property="og:image" content="assets/img/perfil.webp">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css?v=20260928-3">
+    <link rel="stylesheet" href="styles.css?v=20261006">
     <title id="page-title">Evertton Thiago — Desenvolvedor Front-end</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="./fotos do port/favicon-32x32.png" type="image/png">
+<script>try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('pre-light')}catch(e){}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Evertton Thiago","jobTitle":"Desenvolvedor Front-end","email":"mailto:everttondark3@gmail.com","sameAs":["https://github.com/Dark1-mst","https://www.linkedin.com/in/evertton-thiago-1953203bb","https://www.instagram.com/evertton.th_/"]}</script>
 </head>
 
 <body>
+    <canvas id="bg" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Pular para conteúdo principal</a>
 
     <div class="scroll-indicator" aria-hidden="true"></div>
@@ -62,9 +68,9 @@
         <section id="home" class="hero">
             <div class="hero-grid">
                 <div class="hero-copy">
-                    <p class="availability"><span class="dot"></span> <span data-i18n="hero.availability">Disponível para estágio, freelas e projetos</span></p>
-                    <h1 data-i18n="hero.title">Evertton Thiago cria experiências digitais que funcionam na prática.</h1>
-                    <p class="hero-lede" data-i18n="hero.lede">Desenvolvedor front-end em formação full stack, com foco em interfaces rápidas, acessíveis e bem pensadas — do primeiro esboço até a entrega final.</p>
+                    <p class="availability"><span class="dot"></span> <span data-i18n="hero.availability">Disponível para projetos, freelas e oportunidades de estágio</span></p>
+                    <h1 data-i18n="hero.title">Evertton Thiago cria software que resolve problemas reais e entrega valor desde o primeiro clique.</h1>
+                    <p class="hero-lede" data-i18n="hero.lede">Desenvolvedor full stack focado em interfaces performáticas, acessíveis e bem pensadas — do produto ao código que sustenta a experiência.</p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#projects" data-i18n="hero.ctaProjects">Ver projetos</a>
                         <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact">Solicitar projeto</a>
@@ -93,7 +99,7 @@
                     <div class="hero-orbit orbit-two"></div>
                     <div class="hero-badge">
                         <strong>18</strong>
-                        <span data-i18n="hero.badge">anos, migrando de carreira para tecnologia</span>
+                        <span data-i18n="hero.badge">anos • em transição para tecnologia</span>
                     </div>
                 </div>
             </div>
@@ -114,17 +120,17 @@
             </div>
             <div class="about-grid">
                 <figure class="profile-card">
-                    <img src="./1774829199175.webp" alt="Foto de Evertton Thiago" loading="lazy">
+                    <img src="assets/img/perfil.webp" alt="Foto de Evertton Thiago" loading="lazy">
                     <figcaption>Evertton Thiago <span data-i18n="about.role">Desenvolvedor Front-end</span></figcaption>
                 </figure>
                 <div class="about-copy">
-                    <p data-i18n="about.p1">Sou apaixonado por tecnologia e entrei no desenvolvimento web com a decisão de migrar de carreira ainda jovem. Em pouco tempo, venho investindo horas reais em projetos, resolução de problemas e aprendizado prático com HTML, CSS e JavaScript.</p>
-                    <p data-i18n="about.p2">Hoje meu foco está em evoluir como full stack, com uma base sólida em front-end e uma expansão natural para back-end com Node.js e Python. Isso me permite construir interfaces com qualidade e entender melhor toda a estrutura por trás delas.</p>
-                    <p data-i18n="about.p3">Também estou ampliando o inglês e o espanhol para trabalhar com equipes e clientes de diferentes lugares, além de consumir documentação técnica com mais autonomia.</p>
+                    <p data-i18n="about.p1">Comecei no desenvolvimento web com a intenção de transformar curiosidade em produto. Hoje invisto em projetos reais, lógica, performance e clareza de código para construir experiências que entregam valor — e não apenas estética.</p>
+                    <p data-i18n="about.p2">Meu foco vai além do front-end: evoluir em arquitetura, lógica de negócio e integrações para criar soluções mais consistentes, fáceis de manter e mais fortes no contexto real do usuário.</p>
+                    <p data-i18n="about.p3">Também estou ampliando o inglês e o espanhol para colaborar com times e clientes de diferentes lugares, além de consumir documentação técnica com autonomia e velocidade.</p>
                     <ul class="about-list">
-                        <li data-i18n="about.list1">Foco em experiência real de uso, não apenas em aparência visual</li>
-                        <li data-i18n="about.list2">Interfaces responsivas, com atenção a desempenho, acessibilidade e clareza</li>
-                        <li data-i18n="about.list3">Aprendizado constante por meio de projetos práticos e desafios reais</li>
+                        <li data-i18n="about.list1">Foco em experiência real de uso, e não apenas em aparência visual</li>
+                        <li data-i18n="about.list2">Interfaces responsivas, com atenção a desempenho, acessibilidade e clareza de implementação</li>
+                        <li data-i18n="about.list3">Aprendizado constante por meio de projetos práticos, desafios reais e código que se sustenta</li>
                     </ul>
                 </div>
             </div>
@@ -133,86 +139,61 @@
         <section id="skills">
             <div class="section-head">
                 <h2 data-i18n="skills.title">Habilidades</h2>
-                <p data-i18n="skills.lede">O que já uso com confiança no dia a dia — e onde ainda estou evoluindo.</p>
+                <p data-i18n="skills.lede">Ferramentas e princípios com os quais eu construo interfaces e sistemas com consistência, clareza e foco em resultado.</p>
             </div>
-            <div class="skills-columns">
-                <div class="skills-group">
-                    <h3 data-i18n="skills.frontend">Front-end</h3>
-                    <div class="skill-item" data-skill="html">
-                        <div class="skill-label"><span class="skill-dot" style="background:#e34c26"></span>HTML</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:88%"></div></div>
-                    </div>
-                    <div class="skill-item" data-skill="css">
-                        <div class="skill-label"><span class="skill-dot" style="background:#1572b6"></span>CSS</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:82%"></div></div>
-                    </div>
-                    <div class="skill-item" data-skill="js">
-                        <div class="skill-label"><span class="skill-dot" style="background:#f7df1e"></span>JavaScript</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:72%"></div></div>
-                    </div>
-                    <div class="skill-item" data-skill="react">
-                        <div class="skill-label"><span class="skill-dot" style="background:#61dafb"></span>React</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:60%"></div></div>
-                    </div>
-                </div>
-                <div class="skills-group">
-                    <h3 data-i18n="skills.backend">Back-end &amp; ferramentas</h3>
-                    <div class="skill-item" data-skill="node">
-                        <div class="skill-label"><span class="skill-dot" style="background:#68a063"></span>Node.js</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:55%"></div></div>
-                    </div>
-                    <div class="skill-item" data-skill="python">
-                        <div class="skill-label"><span class="skill-dot" style="background:#3776ab"></span>Python</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:65%"></div></div>
-                    </div>
-                    <div class="skill-item" data-skill="git">
-                        <div class="skill-label"><span class="skill-dot" style="background:#f05032"></span>Git &amp; GitHub</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:78%"></div></div>
-                    </div>
-                    <div class="skill-item" data-skill="uiux">
-                        <div class="skill-label"><span class="skill-dot" style="background:#ff8a5c"></span>UI/UX</div>
-                        <div class="progress-bar"><div class="progress-fill" style="--w:68%"></div></div>
-                    </div>
-                </div>
+            <div class="skills-tiers">
+                <div><h3 data-i18n="skills.t1">No dia a dia</h3><ul>
+                    <li><span class="skill-dot" style="background:#e34c26"></span>HTML</li>
+                    <li><span class="skill-dot" style="background:#1572b6"></span>CSS</li>
+                    <li><span class="skill-dot" style="background:#f7df1e"></span>JavaScript</li>
+                    <li><span class="skill-dot" style="background:#f05032"></span>Git &amp; GitHub</li></ul></div>
+                <div><h3 data-i18n="skills.t2">Aprofundando</h3><ul>
+                    <li><span class="skill-dot" style="background:#61dafb"></span>React</li>
+                    <li><span class="skill-dot" style="background:#68a063"></span>Node.js</li>
+                    <li><span class="skill-dot" style="background:#3776ab"></span>Python</li></ul></div>
+                <div><h3 data-i18n="skills.t3">Junto com o código</h3><ul>
+                    <li><span class="skill-dot" style="background:#ff8a5c"></span>UI/UX</li>
+                    <li><span class="skill-dot" style="background:#b9a2ff"></span><span data-i18n="skills.resp">Responsividade</span></li>
+                    <li><span class="skill-dot" style="background:#9fe6e0"></span><span data-i18n="skills.a11y">Acessibilidade</span></li></ul></div>
             </div>
         </section>
 
         <section id="journey">
             <div class="section-head">
                 <h2 data-i18n="journey.title">Minha evolução</h2>
-                <p data-i18n="journey.lede">Uma jornada construída com prática, curiosidade e projetos reais.</p>
+                <p data-i18n="journey.lede">Um caminho construído com prática, curiosidade e foco em entregar software que realmente funciona.</p>
             </div>
             <div class="journey-timeline">
                 <article class="journey-item">
                     <span class="journey-marker">01</span>
                     <div>
                         <p class="journey-period" data-i18n="journey.p1.period">O começo</p>
-                        <h3 data-i18n="journey.p1.title">Primeiros passos no desenvolvimento web</h3>
-                        <p data-i18n="journey.p1.desc">Comecei a transformar curiosidade por tecnologia em prática com HTML, CSS e JavaScript.</p>
+                        <h3 data-i18n="journey.p1.title">Primeiros passos rumo à engenharia de software</h3>
+                        <p data-i18n="journey.p1.desc">Comecei transformando curiosidade em prática, com HTML, CSS e JavaScript como base para entender como a web funciona na prática.</p>
                     </div>
                 </article>
                 <article class="journey-item">
                     <span class="journey-marker">02</span>
                     <div>
                         <p class="journey-period" data-i18n="journey.p2.period">Na prática</p>
-                        <h3 data-i18n="journey.p2.title">Projetos para resolver problemas reais</h3>
-                        <p data-i18n="journey.p2.desc">Passei a construir ferramentas, interfaces responsivas e experiências que podem ser usadas de verdade.</p>
+                        <h3 data-i18n="journey.p2.title">Construindo interfaces que resolvem problemas reais</h3>
+                        <p data-i18n="journey.p2.desc">Passei a desenvolver ferramentas e experiências com foco em usabilidade, clareza e valor para quem vai usar o produto.</p>
                     </div>
                 </article>
                 <article class="journey-item">
                     <span class="journey-marker">03</span>
                     <div>
                         <p class="journey-period" data-i18n="journey.p3.period">Agora</p>
-                        <h3 data-i18n="journey.p3.title">Expansão para full stack</h3>
-                        <p data-i18n="journey.p3.desc">Estou aprofundando React, Node.js e Python para entender e construir produtos de ponta a ponta.</p>
+                        <h3 data-i18n="journey.p3.title">Ampliando a visão para full stack</h3>
+                        <p data-i18n="journey.p3.desc">Estou aprofundando React, Node.js e Python para entender melhor a construção completa de produtos, da interface à lógica que sustenta tudo.</p>
                     </div>
                 </article>
                 <article class="journey-item">
                     <span class="journey-marker">04</span>
                     <div>
                         <p class="journey-period" data-i18n="journey.p4.period">Próximo passo</p>
-                        <h3 data-i18n="journey.p4.title">Entrar no mercado e continuar crescendo</h3>
-                        <p data-i18n="journey.p4.desc">Busco uma oportunidade para colaborar, aprender com um time e entregar valor desde o primeiro dia.</p>
+                        <h3 data-i18n="journey.p4.title">Contribuir em times reais e continuar evoluindo</h3>
+                        <p data-i18n="journey.p4.desc">Busco uma oportunidade para aprender em equipe, colaborar com foco e entregar valor desde os primeiros desafios.</p>
                     </div>
                 </article>
             </div>
@@ -226,11 +207,11 @@
             <div class="project-grid">
                 <article class="project-card">
                     <div class="project-media">
-                        <video src="./fotos do port/vidiododarkgenerator.mp4" controls preload="metadata"></video>
+                        <video src="assets/video/dark-generator.mp4" poster="assets/img/dark-generator-poster.webp" controls preload="none" playsinline></video>
                     </div>
                     <div class="project-body">
                         <div class="project-heading"><span class="project-status" data-i18n="projects.statusComplete">Concluído</span><h3>Dark Generator</h3></div>
-                        <p data-i18n="projects.p1.desc">Ferramenta com integração de IA para gerar temas escuros personalizados. Front-end em HTML, CSS e JavaScript, com lógica em Python para o processamento.</p>
+                        <p data-i18n="projects.p1.desc">Ferramenta com integração de IA para gerar temas escuros personalizados, combinando experiência visual com automação para acelerar a criação de interfaces mais consistentes.</p>
                         <ul class="project-tags">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li data-i18n="tag.ia">IA</li>
                         </ul>
@@ -243,12 +224,12 @@
 
                 <article class="project-card">
                     <div class="project-media project-media-multi">
-                        <img src="./fotos do port/1713491545256.jpg" alt="Tela do site de delivery" loading="lazy">
-                        <video src="./fotos do port/Gravando 2026-04-27 202946.mp4" controls preload="metadata"></video>
+                        <img src="assets/img/delivery.webp" alt="Tela do site de delivery" loading="lazy">
+                        <video src="assets/video/delivery-app.mp4" poster="assets/img/delivery-app-poster.webp" controls preload="none" playsinline></video>
                     </div>
                     <div class="project-body">
                         <div class="project-heading"><span class="project-status project-status-progress" data-i18n="projects.statusProgress">Em desenvolvimento</span><h3>Delivery App Web</h3></div>
-                        <p data-i18n="projects.p2.desc">Site de delivery com suporte a versão mobile, ainda em desenvolvimento. Front-end responsivo pensado para pedidos rápidos, com foco em usabilidade em telas pequenas.</p>
+                        <p data-i18n="projects.p2.desc">Aplicação de delivery com foco em mobile-first, pensando em fluxo de compra rápido, navegação clara e usabilidade em telas pequenas sem perder legibilidade e velocidade.</p>
                         <ul class="project-tags">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li><li data-i18n="tag.responsive">Responsivo</li>
                         </ul>
@@ -261,11 +242,11 @@
 
                 <article class="project-card">
                     <div class="project-media">
-                        <img src="./fotos do port/dark converter.png" alt="Interface do Dark Converter, um conversor de moedas" loading="lazy">
+                        <img src="assets/img/dark-converter.webp" alt="Interface do Dark Converter, um conversor de moedas" loading="lazy">
                     </div>
                     <div class="project-body">
                         <div class="project-heading"><span class="project-status" data-i18n="projects.statusComplete">Concluído</span><h3>Dark Converter</h3></div>
-                        <p data-i18n="projects.p3.desc">Conversor de moedas com interface escura, criado para consultar e converter valores entre moedas diferentes de forma simples e rápida.</p>
+                        <p data-i18n="projects.p3.desc">Conversor de moedas com interface clara e direta, desenvolvido para entrega de informação rápida e conversão simples entre diferentes moedas.</p>
                         <ul class="project-tags">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li>
                         </ul>
@@ -281,42 +262,42 @@
         <section id="certificates">
             <div class="section-head">
                 <h2 data-i18n="certificates.title">Certificados</h2>
-                <p data-i18n="certificates.lede">Formações que sustentam o que eu digo saber fazer.</p>
+                <p data-i18n="certificates.lede">Formações que reforçam a base, a disciplina e a capacidade de construir software com qualidade.</p>
             </div>
             <div class="certificates-container">
                 <article class="certificate-card">
-                    <img src="./certificados/Certificado - HTML.png" alt="Certificado de HTML" loading="lazy">
+                    <img src="assets/img/cert-html.webp" alt="Certificado de HTML" loading="lazy">
                     <div class="certificate-body">
                         <span class="cert-badge" style="--c:#e34c26">HTML5</span>
                         <h3 data-i18n="certificates.c1.title">Formação DevClub HTML — Rodolfo Mori</h3>
-                        <p data-i18n="certificates.c1.desc">Curso prático com foco em projetos reais, boas práticas de desenvolvimento e criação de interfaces responsivas.</p>
+                        <p data-i18n="certificates.c1.desc">Curso prático focado em projetos reais, boas práticas de desenvolvimento e criação de interfaces responsivas com qualidade.</p>
                         <p class="certificate-date" data-i18n="certificates.issued2026">Emitido em 2026</p>
                     </div>
                 </article>
                 <article class="certificate-card">
-                    <img src="./certificados/Certificado - CSS Intermediário.png" alt="Certificado de CSS Intermediário" loading="lazy">
+                    <img src="assets/img/cert-css.webp" alt="Certificado de CSS Intermediário" loading="lazy">
                     <div class="certificate-body">
                         <span class="cert-badge" style="--c:#1572b6">CSS3</span>
                         <h3 data-i18n="certificates.c2.title">Certificação CSS DevClub</h3>
-                        <p data-i18n="certificates.c2.desc">Layout moderno, responsividade e animações CSS com Flexbox, Grid e transições fluidas.</p>
+                        <p data-i18n="certificates.c2.desc">Aprofundamento em layout moderno, responsividade e animações com Flexbox, Grid e transições mais refinadas.</p>
                         <p class="certificate-date" data-i18n="certificates.issued2026">Emitido em 2026</p>
                     </div>
                 </article>
                 <article class="certificate-card">
-                    <img src="./certificados/Captura de tela 2026-04-05 190035.png" alt="Certificado de JavaScript, HTML e CSS com IA" loading="lazy">
+                    <img src="assets/img/cert-js-ia.webp" alt="Certificado de JavaScript, HTML e CSS com IA" loading="lazy">
                     <div class="certificate-body">
                         <span class="cert-badge" style="--c:#f7df1e">JS + IA</span>
                         <h3 data-i18n="certificates.c3.title">JavaScript, HTML e CSS com integração a IA</h3>
-                        <p data-i18n="certificates.c3.desc">Desenvolvimento web com foco em integrar inteligência artificial para melhorar eficiência e qualidade de código.</p>
+                        <p data-i18n="certificates.c3.desc">Desenvolvimento web com foco em integrar inteligência artificial para melhorar produtividade, criatividade e qualidade de entrega.</p>
                         <p class="certificate-date" data-i18n="certificates.added2026">Adicionado em 2026</p>
                     </div>
                 </article>
                 <article class="certificate-card">
-                    <img src="./certificados/gitANDgithub.png" alt="Certificado de Git & GitHub" loading="lazy">
+                    <img src="assets/img/cert-git.webp" alt="Certificado de Git & GitHub" loading="lazy">
                     <div class="certificate-body">
                         <span class="cert-badge" style="--c:#f05032">Git &amp; GitHub</span>
                         <h3 data-i18n="certificates.c4.title">Git &amp; GitHub Masterclass</h3>
-                        <p data-i18n="certificates.c4.desc">Versionamento de código, branches, commits e colaboração em equipe com boas práticas de workflow.</p>
+                        <p data-i18n="certificates.c4.desc">Versionamento, colaboração em equipe, organização de branches e commits com um workflow mais profissional e escalável.</p>
                         <p class="certificate-date" data-i18n="certificates.added2026">Adicionado em 2026</p>
                     </div>
                 </article>
@@ -324,7 +305,7 @@
                     <div class="certificate-body">
                         <span class="cert-badge" style="--c:#7c9eff" data-i18n="certificates.inProgress">Em andamento</span>
                         <h3 data-i18n="certificates.next.title">Próxima formação: back-end com Node.js</h3>
-                        <p data-i18n="certificates.next.desc">Continuando a jornada full stack — essa seção é atualizada conforme novas certificações são concluídas.</p>
+                        <p data-i18n="certificates.next.desc">Continuando a jornada full stack — essa seção evolui conforme novas etapas e novos desafios forem concluídos.</p>
                     </div>
                 </article>
             </div>
@@ -363,6 +344,10 @@
             <div class="section-head">
                 <h2 data-i18n="contact.title">Contato</h2>
                 <p data-i18n="contact.lede">Me manda uma mensagem — respondo por aqui, e-mail ou LinkedIn.</p>
+            </div>
+            <div class="mail-cta">
+                <a class="mail-big" href="mailto:everttondark3@gmail.com">everttondark3@gmail.com</a>
+                <button type="button" id="copy-mail" class="btn btn-ghost" data-i18n="contact.copy">Copiar e-mail</button>
             </div>
             <div class="contact-grid">
                 <form id="contact-form" class="contact-form">
@@ -420,6 +405,7 @@
     </dialog>
 
     <script src="i18n.js"></script>
-    <script src="scripts.js?v=20260928"></script>
+    <script src="scripts.js?v=20261006"></script>
+    <script src="bg.js?v=20261006"></script>
 </body>
 </html>
