@@ -340,6 +340,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const checkBackend = async () => {
+      const isStaticPreview = ['localhost', '127.0.0.1', ''].includes(window.location.hostname) || window.location.protocol === 'file:';
+
+      if (isStaticPreview) {
+        backendAvailable = false;
+        setStatus('offline');
+        return;
+      }
+
       setStatus('checking');
       try {
         const r = await fetch('/api/chat');
