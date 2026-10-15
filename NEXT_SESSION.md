@@ -1,7 +1,7 @@
 # NEXT_SESSION
 
 ## Estado atual
-Ciclo 1 concluído: redesign completo (preto/grafite), arquitetura em módulos, correções de bugs, QA automatizado verde (122 asserções, ver log). O projeto abre por duplo clique e passa em `node tests/qa.mjs`. **Nada foi publicado nem alterado fora do repositório.**
+Ciclo 1 concluído e publicado no GitHub (`main`, commit `5f2d676`): redesign completo (preto/grafite), arquitetura em módulos e correções de bugs. O QA automatizado registrado abaixo passou (122 asserções). Nesta sessão, uma nova execução ficou mais de três minutos sem resultado e foi interrompida; ela não constitui uma nova validação. O push incluiu o commit local anterior e as alterações pendentes do projeto; `portfolio-evoluido.patch` ficou fora do GitHub.
 
 Arquivos principais: `index.html`, `css/styles.css`, `js/*.js`, `js/i18n/dictionary.js`, `api/chat.js`, `tests/qa.mjs`, `tools/make-assets.mjs`.
 Arquivos removidos (substituídos; recuperáveis pelo git): `styles.css`, `scripts.js`, `bg.js`, `i18n.js` da raiz.

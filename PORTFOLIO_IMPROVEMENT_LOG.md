@@ -1,6 +1,6 @@
 # PORTFOLIO_IMPROVEMENT_LOG
 
-Registro vivo do trabalho de evolução do portfólio. Última atualização: ciclo 1 (15/10/2026).
+Registro vivo do trabalho de evolução do portfólio. Última atualização: ciclo 1, publicado no GitHub em 15/10/2026 (commit `5f2d676`).
 
 ## 1. Objetivos
 Transformar o portfólio existente numa experiência premium com **preto como identidade**, animações refinadas e acessíveis, responsividade real, projetos bem apresentados, código sustentável, performance e SEO verificáveis — **sem inventar nenhum dado** e preservando o que já funcionava (i18n em 4 idiomas, tema claro/escuro, Kawanny, visualizador, formulário).
