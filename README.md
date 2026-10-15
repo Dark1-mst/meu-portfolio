@@ -1,31 +1,73 @@
 # Portfólio — Evertton Thiago
 
+Site estático (HTML + CSS + JavaScript puros, sem build) com uma função serverless opcional para a assistente **Kawanny**. Identidade: preto profundo e grafite, tipografia serifada de destaque (Instrument Serif) + Geist, luz como único elemento decorativo.
+
+## Como rodar
+
+- **Mais simples:** dê duplo clique em `index.html`. Funciona via `file://` porque os scripts são clássicos (sem ES modules). Nesse modo a Kawanny responde em modo local (sem IA).
+- **Servidor local (recomendado para testar tudo):** `npx serve .` ou a extensão *Live Server* do VS Code.
+- **Com a IA da Kawanny:** `npx vercel dev` (precisa da variável `ANTHROPIC_API_KEY`, veja abaixo).
+
 ## Estrutura
-- `index.html`, `styles.css`, `scripts.js` — o site.
-- `api/chat.js` — função serverless que conecta a Kawanny a uma IA real (Claude).
-- `fotos do port/`, `certificados/`, `1774829199175.webp` — suas imagens e vídeos originais.
 
-## Como publicar na Vercel (grátis)
-1. Suba esta pasta para um repositório no GitHub.
-2. Entre em [vercel.com](https://vercel.com), clique em **Add New → Project** e selecione o repositório.
-3. Não precisa mudar nenhuma configuração de build — é um site estático com uma função serverless, a Vercel detecta sozinha.
-4. Antes (ou depois) do primeiro deploy, vá em **Project Settings → Environment Variables** e adicione:
-   - `ANTHROPIC_API_KEY` = sua chave da API da Anthropic (console.anthropic.com)
-5. Clique em **Deploy**. Pronto — a Kawanny já responde qualquer pergunta usando IA real.
+```
+index.html               marcação semântica; PT é o idioma padrão (data-i18n="chave")
+css/styles.css           uma folha só: tokens → base → componentes → seções → movimento → responsivo
+js/
+  core.js                namespace Portfolio, utilitários, registro de módulos (falha isolada)
+  theme.js               tema escuro/claro (+ View Transitions)
+  language.js            troca de idioma PT/EN/ES/RU
+  nav.js                 menu mobile, item ativo, indicador deslizante, progresso
+  motion.js              revelações por rolagem, luz do ponteiro, 1 vídeo por vez
+  background.js          "seda de luz" WebGL (só no hero, só quando visível)
+  lightbox.js            visualizador de imagens (<dialog>)
+  contact.js             copiar e-mail + formulário (mailto:)
+  chat.js                Kawanny (IA via /api/chat, com reserva local)
+  main.js                inicia tudo
+  i18n/dictionary.js     textos da interface nos 4 idiomas
+  i18n/knowledge.js      base local da Kawanny (carregada só quando necessária)
+api/chat.js              função serverless (Vercel) que fala com a API da Anthropic
+assets/                  imagens, vídeos, ícones (derivados gerados por tools/make-assets.mjs)
+tools/make-assets.mjs    regera favicon, ruído, imagem de compartilhamento e variantes responsivas
+tests/qa.mjs             suíte de QA automatizada (Playwright)
+```
 
-Se você não configurar a `ANTHROPIC_API_KEY`, o site continua funcionando normalmente:
-a Kawanny detecta que o backend não está disponível e usa automaticamente o modo de
-respostas locais (mais limitado, mas sempre funcional).
+## Editar conteúdo
 
-## Itens para você personalizar
-- **Links dos projetos**: em `index.html`, procure por `href="#"` dentro de `.project-links`
-  e troque pelos links reais do GitHub e das demos de cada projeto.
-- **Formulário de contato**: hoje ele só valida os campos e reseta (não envia e-mail de
-  verdade). Para receber as mensagens, conecte a um serviço como
-  [Formspree](https://formspree.io) ou [EmailJS](https://www.emailjs.com), ou crie outra
-  função em `api/` que envie o e-mail — o comentário no `scripts.js` marca onde mexer.
+- **Textos:** estão no HTML (PT) e em `js/i18n/dictionary.js` (4 idiomas). Para mudar um texto, altere **a chave nos 4 idiomas** — o QA verifica a paridade e chaves mortas.
+- **Novo projeto:** copie um `<article class="project">` em `index.html` e crie as chaves `projects.pN.*` no dicionário.
+- **Links dos projetos:** hoje todos apontam para o perfil `github.com/Dark1-mst` (o link "Ver demo" antigo apontava para o repositório do próprio portfólio e foi removido). Troque pelo repositório/demo reais assim que existirem.
+- **Cor de destaque, espaçamentos, tipografia:** tokens no topo de `css/styles.css` (`:root` e `[data-theme="light"]`).
 
-## Rodando localmente
-Como é HTML/CSS/JS puro, basta abrir `index.html` no navegador para ver o layout.
-A função `api/chat.js` só funciona quando publicada na Vercel (ou rodando com
-`vercel dev`), porque depende do ambiente serverless.
+## Kawanny com IA (Vercel)
+
+1. Vercel → *Project Settings → Environment Variables* → `ANTHROPIC_API_KEY`.
+2. (Opcional) `ANTHROPIC_MODEL` para trocar o modelo (padrão: o que já estava em uso).
+3. Redeploy. O site detecta sozinho (`GET /api/chat` → `{ ai: true }`); sem chave, usa a base local.
+
+A chave nunca vai para o navegador. Há limite de 12 mensagens/min por IP (em memória, por instância) e o texto de erro da API **não** é repassado ao visitante.
+
+## Formulário de contato
+
+O site é estático: o formulário valida e **abre o app de e-mail** do visitante (`mailto:`). A mensagem não passa por servidor. Para receber mensagens direto na caixa de entrada, integre um serviço (Formspree, Resend etc.) — exige uma conta/chave sua, por isso não foi feito automaticamente.
+
+## QA
+
+```bash
+npm i --no-save playwright && npx playwright install chromium
+node tests/qa.mjs                    # tudo
+QA_ONLY=forms node tests/qa.mjs      # grupos: i18n, structure, overflow, motion, a11y, forms, contrast, perf
+QA_LANGS=ru QA_ONLY=overflow node tests/qa.mjs
+```
+
+Cobre: paridade i18n, estrutura/ARIA/links/SEO, overflow em 13 larguras, revelações e *reduced motion*, teclado/menu/visualizador, formulário, chat (incluindo backend simulado), contraste dos tokens (AA) e CLS/long tasks.
+
+## Deploy
+
+`vercel.json` define cabeçalhos de segurança e cache de `assets/`. `.vercelignore` impede a publicação de `fotos do port/` (169 MB de originais), `certificados/`, `tools/`, `tests/` e docs.
+
+## Acessibilidade e movimento
+
+`prefers-reduced-motion` desliga entradas, revelações, seda de luz (fica um quadro estático) e rolagem suave. Sem JavaScript, todo o conteúdo continua visível (em PT). Contraste dos tokens verificado ≥ 4,5:1 nos dois temas.
+
+Histórico de decisões, pendências e próximos passos: `PORTFOLIO_IMPROVEMENT_LOG.md` e `NEXT_SESSION.md`.

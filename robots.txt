@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# TODO(domínio): quando o domínio de produção existir, acrescente a linha
+# Sitemap: https://SEU-DOMINIO/sitemap.xml  (site de página única: o sitemap é opcional)

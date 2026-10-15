@@ -1,0 +1,8 @@
+# Originais pesados e arquivos de trabalho: não precisam ir para produção
+fotos do port/
+certificados/
+1774829199175.webp
+desktop.ini
+tools/
+tests/
+*.md
